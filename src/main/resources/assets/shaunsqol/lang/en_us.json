@@ -1,4 +1,6 @@
 {
   "item.shaunsqol.raw_tin": "Raw Tin",
-  "item.shaunsqol.ingot_tin": "Tin Ingot"
+  "item.shaunsqol.ingot_tin": "Tin Ingot",
+
+  "itemGroup.shaunsqoltab": "Shaun's QoL"
 }

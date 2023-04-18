@@ -2,6 +2,8 @@ package com.shauncjones.shaunsqol;
 
 import com.mojang.logging.LogUtils;
 import com.shauncjones.shaunsqol.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -16,6 +18,14 @@ import org.slf4j.Logger;
 public class ShaunsQoL {
     public static final String MOD_ID = "shaunsqol";
     private static final Logger LOGGER = LogUtils.getLogger();
+
+    //Create custom creative mode tab with the Tin Ingot as the icon.
+    public static final CreativeModeTab SHAUNSQOL_TAB = new CreativeModeTab("shaunsqoltab") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(ModItems.ingotTin.get());
+        }
+    };
 
     public ShaunsQoL() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
