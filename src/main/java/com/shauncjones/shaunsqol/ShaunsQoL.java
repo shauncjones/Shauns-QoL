@@ -1,6 +1,7 @@
 package com.shauncjones.shaunsqol;
 
 import com.mojang.logging.LogUtils;
+import com.shauncjones.shaunsqol.block.ModBlocks;
 import com.shauncjones.shaunsqol.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -31,6 +32,7 @@ public class ShaunsQoL {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

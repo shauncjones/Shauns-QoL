@@ -2,5 +2,9 @@
   "item.shaunsqol.raw_tin": "Raw Tin",
   "item.shaunsqol.ingot_tin": "Tin Ingot",
 
+  "block.shaunsqol.block_tin": "Block of Tin",
+  "block.shaunsqol.ore_tin": "Tin Ore",
+  "block.shaunsqol.deepslate_ore_tin": "Deepslate Tin Ore",
+
   "itemGroup.shaunsqoltab": "Shaun's QoL"
 }
