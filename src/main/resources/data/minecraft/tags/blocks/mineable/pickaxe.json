@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "shaunsqol:ore_tin",
+    "shaunsqol:deepslate_ore_tin",
+    "shaunsqol:block_tin"
+  ]
+}

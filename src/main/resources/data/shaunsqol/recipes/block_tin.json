@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "shaunsqol:ingot_tin"
+    }
+  },
+  "result": {
+    "item": "shaunsqol:block_tin"
+  }
+}
