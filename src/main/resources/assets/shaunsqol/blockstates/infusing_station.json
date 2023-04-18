@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "shaunsqol:block/infusing_station"
+    },
+    "facing=south": {
+      "model": "shaunsqol:block/infusing_station",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "shaunsqol:block/infusing_station",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "shaunsqol:block/infusing_station",
+      "y": 90
+    }
+  }
+}

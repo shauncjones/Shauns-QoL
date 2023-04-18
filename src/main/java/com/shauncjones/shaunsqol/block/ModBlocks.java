@@ -1,6 +1,7 @@
 package com.shauncjones.shaunsqol.block;
 
 import com.shauncjones.shaunsqol.ShaunsQoL;
+import com.shauncjones.shaunsqol.block.custom.InfusingStationBlock;
 import com.shauncjones.shaunsqol.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -22,9 +23,11 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ShaunsQoL.MOD_ID);
 
     //Tin Blocks
-    public static RegistryObject<Block> BLOCK_TIN = registerBlock("block_tin", () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(6f).requiresCorrectToolForDrops()), ShaunsQoL.SHAUNSQOL_TAB);
-    public static RegistryObject<Block> ORE_TIN = registerBlock("ore_tin", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.METAL).strength(6f).requiresCorrectToolForDrops(), UniformInt.of(3,7)), ShaunsQoL.SHAUNSQOL_TAB);
-    public static RegistryObject<Block> DEEPSLATE_ORE_TIN = registerBlock("deepslate_ore_tin", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.METAL).strength(6f).requiresCorrectToolForDrops(), UniformInt.of(3,7)), ShaunsQoL.SHAUNSQOL_TAB);
+    public static final RegistryObject<Block> BLOCK_TIN = registerBlock("block_tin", () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(6f).requiresCorrectToolForDrops()), ShaunsQoL.SHAUNSQOL_TAB);
+    public static final RegistryObject<Block> ORE_TIN = registerBlock("ore_tin", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.METAL).strength(6f).requiresCorrectToolForDrops(), UniformInt.of(3,7)), ShaunsQoL.SHAUNSQOL_TAB);
+    public static final RegistryObject<Block> DEEPSLATE_ORE_TIN = registerBlock("deepslate_ore_tin", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.METAL).strength(6f).requiresCorrectToolForDrops(), UniformInt.of(3,7)), ShaunsQoL.SHAUNSQOL_TAB);
+
+    public static final RegistryObject<Block> INFUSING_STATION = registerBlock("infusing_station",() -> new InfusingStationBlock(BlockBehaviour.Properties.of(Material.METAL).strength(6f).noOcclusion()), ShaunsQoL.SHAUNSQOL_TAB);
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
