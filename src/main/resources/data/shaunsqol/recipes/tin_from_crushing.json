@@ -1,0 +1,10 @@
+{
+  "type": "shaunsqol:crushing",
+  "ingredients": [{
+    "item": "shaunsqol:ore_tin"
+  }],
+  "output": {
+    "item": "shaunsqol:raw_tin",
+    "count": 2
+  }
+}

@@ -1,7 +1,12 @@
 package com.shauncjones.shaunsqol;
 
 import com.shauncjones.shaunsqol.block.ModBlocks;
+import com.shauncjones.shaunsqol.block.entity.ModBlockEntities;
 import com.shauncjones.shaunsqol.item.ModItems;
+import com.shauncjones.shaunsqol.recipe.ModRecipes;
+import com.shauncjones.shaunsqol.screen.CrusherScreen;
+import com.shauncjones.shaunsqol.screen.ModMenuTypes;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -34,13 +39,17 @@ public class ShaunsQoL {
     private IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
     public ShaunsQoL() {
-        LOGGER.info("Shaun's QoL: Loading Shaun's QoL Version 0.0.1-1.19");
+        LOGGER.info("Shaun's QoL: Loading Shaun's QoL Version 0.0.1-1.19.2");
 
         modEventBus.addListener(this::commonSetup);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         LOGGER.info("Shaun's QoL: Loaded " + ModItems.ITEMS.getEntries().size() + " items & " + ModBlocks.BLOCKS.getEntries().size() + " blocks");
+
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -54,7 +63,7 @@ public class ShaunsQoL {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            MenuScreens.register(ModMenuTypes.CRUSHER_MENU.get(), CrusherScreen::new);
         }
     }
 }

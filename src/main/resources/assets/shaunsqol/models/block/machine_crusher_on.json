@@ -1,0 +1,8 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "front": "shaunsqol:block/crusher_front_on",
+    "side": "shaunsqol:block/crusher_side",
+    "top": "shaunsqol:block/crusher_top"
+  }
+}
