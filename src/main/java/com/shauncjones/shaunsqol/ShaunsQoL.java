@@ -6,6 +6,7 @@ import com.shauncjones.shaunsqol.item.ModItems;
 import com.shauncjones.shaunsqol.recipe.ModRecipes;
 import com.shauncjones.shaunsqol.screen.screen.block.CrusherScreen;
 import com.shauncjones.shaunsqol.screen.ModMenuTypes;
+import com.shauncjones.shaunsqol.screen.screen.item.BackpackScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -61,6 +62,7 @@ public class ShaunsQoL {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             MenuScreens.register(ModMenuTypes.CRUSHER_MENU.get(), CrusherScreen::new);
+            MenuScreens.register(ModMenuTypes.BACKPACK_MENU.get(), BackpackScreen::new);
         }
     }
 }
