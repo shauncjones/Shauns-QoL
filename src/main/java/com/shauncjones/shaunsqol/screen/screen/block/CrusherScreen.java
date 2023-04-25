@@ -1,8 +1,9 @@
-package com.shauncjones.shaunsqol.screen;
+package com.shauncjones.shaunsqol.screen.screen.block;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.shauncjones.shaunsqol.ShaunsQoL;
+import com.shauncjones.shaunsqol.screen.menu.block.CrusherMenu;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;

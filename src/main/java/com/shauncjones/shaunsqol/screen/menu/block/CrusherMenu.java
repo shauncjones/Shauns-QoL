@@ -1,8 +1,9 @@
-package com.shauncjones.shaunsqol.screen;
+package com.shauncjones.shaunsqol.screen.menu.block;
 
 import com.shauncjones.shaunsqol.block.ModBlocks;
 import com.shauncjones.shaunsqol.block.custom.CrusherBlock;
 import com.shauncjones.shaunsqol.block.entity.CrusherBlockEntity;
+import com.shauncjones.shaunsqol.screen.ModMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Inventory;

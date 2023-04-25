@@ -1,7 +1,8 @@
 package com.shauncjones.shaunsqol.screen;
 
 import com.shauncjones.shaunsqol.ShaunsQoL;
-import net.minecraft.world.MenuProvider;
+import com.shauncjones.shaunsqol.screen.menu.block.CrusherMenu;
+import com.shauncjones.shaunsqol.screen.menu.item.BackpackMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
@@ -15,8 +16,8 @@ public class ModMenuTypes {
 
     public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.MENU_TYPES, ShaunsQoL.MOD_ID);
 
-    public static final RegistryObject<MenuType<CrusherMenu>> CRUSHER_MENU =
-            registerMenuType(CrusherMenu::new, "crusher_menu");
+    public static final RegistryObject<MenuType<CrusherMenu>> CRUSHER_MENU = registerMenuType(CrusherMenu::new, "crusher_menu");
+    public static final RegistryObject<MenuType<CrusherMenu>> BACKPACK_MENU = registerMenuType(BackpackMenu::new, "backpack_menu");
 
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {
