@@ -7,6 +7,8 @@ import com.shauncjones.shaunsqol.recipe.ModRecipes;
 import com.shauncjones.shaunsqol.screen.screen.block.CrusherScreen;
 import com.shauncjones.shaunsqol.screen.ModMenuTypes;
 import com.shauncjones.shaunsqol.screen.screen.item.BackpackScreen;
+import com.shauncjones.shaunsqol.world.feature.ModConfiguredFeatures;
+import com.shauncjones.shaunsqol.world.feature.ModPlacedFeatures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -48,6 +50,8 @@ public class ShaunsQoL {
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
         ModRecipes.register(modEventBus);
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }

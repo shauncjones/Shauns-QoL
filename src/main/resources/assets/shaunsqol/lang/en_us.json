@@ -2,11 +2,15 @@
   "item.shaunsqol.raw_tin": "Raw Tin",
   "item.shaunsqol.ingot_tin": "Tin Ingot",
 
+  "item.shaunsqol.backpack": "Backpack",
+
   "block.shaunsqol.block_tin": "Block of Tin",
   "block.shaunsqol.ore_tin": "Tin Ore",
   "block.shaunsqol.deepslate_ore_tin": "Deepslate Tin Ore",
   "block.shaunsqol.infusing_station": "Infusing Station",
   "block.shaunsqol.machine_crusher": "Crusher",
+
+  "container.shaunsqol.backpack": "Backpack",
 
   "itemGroup.shaunsqoltab": "Shaun's QoL"
 }
