@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "shaunsqol:item/backpack",
+    "layer1": "shaunsqol:item/backpack_lock"
+  }
+}
