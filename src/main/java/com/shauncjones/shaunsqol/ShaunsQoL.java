@@ -26,8 +26,6 @@ import org.apache.logging.log4j.Logger;
 
 import javax.annotation.Nonnull;
 
-//TODO: BUG HAS ALL BACKPACKS SHOWING IN ALL CREATIVE TABS
-
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ShaunsQoL.MOD_ID)
 public class ShaunsQoL {

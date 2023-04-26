@@ -3,6 +3,8 @@ package com.shauncjones.shaunsqol.item.custom;
 import com.shauncjones.shaunsqol.ShaunsQoL;
 import com.shauncjones.shaunsqol.inventory.BackpackInventory;
 import com.shauncjones.shaunsqol.screen.menu.item.BackpackMenu;
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
@@ -17,6 +19,9 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class BackpackItem extends Item {
     public static final int SIZE = 27;
@@ -38,6 +43,18 @@ public class BackpackItem extends Item {
             return getBackpackColor(stack);
         }
         return 0xFFFFFF;
+    }
+
+    @Override
+    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+
+        if(Screen.hasShiftDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.shaunsqol.backpack"));
+        }else{
+            pTooltipComponents.add(Component.translatable("tooltip.shaunsqol.shift").withStyle(ChatFormatting.BLUE));
+        }
+
+        super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 
     public static SimpleContainer getInventory(ItemStack stack) {

@@ -12,5 +12,8 @@
 
   "container.shaunsqol.backpack": "Backpack",
 
+  "tooltip.shaunsqol.shift": "Press SHIFT for more info",
+  "tooltip.shaunsqol.backpack": "A simple backpack to hold items",
+
   "itemGroup.shaunsqoltab": "Shaun's QoL"
 }
